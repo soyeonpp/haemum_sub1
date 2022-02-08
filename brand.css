@@ -1,0 +1,492 @@
+html{
+    overflow-x: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+ul,ol{
+    list-style: none;
+}
+body{
+    line-height: 23px;
+    font-size: 16px;
+    font-family: 'NanumBarunGothic';
+    color: #111;
+    min-width: 1350px;
+    overflow-x: hidden;
+}
+
+/*font*/
+/*ㅡ>기본폰트(나눔바른고딕)*/
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+   /*ㅡ>철학 제목 폰트(카페써라운드)*/
+   @font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+   /*header*/
+#header{
+    height: 75px;
+    background: white;
+}
+#header_inner{
+    margin: 0 auto;
+    width: 1320px;
+}
+/*header-로고*/
+#logo{
+    float: left;
+    padding-top: 5px;
+}
+
+#logo img{
+    display: block;
+}
+/*header-메뉴*/
+#header_inner ul{
+    float: left;
+    margin-left: 160px;
+}
+#header_inner ul li{
+    float: left;
+    padding: 26px 60px;
+}
+#header_inner ul li a{
+    color: #c52601;
+    font-weight: bold;
+}
+#header_inner ul li a{
+    position: relative;
+}
+
+#header_inner ul li a span{
+    height:3px;
+    width:120%;
+    background-color: orangered;
+    position: absolute;
+    bottom:-27px;
+    left:50%;
+    transform:translateX(-50%) scaleX(0);
+}
+
+#header_inner ul li a:hover span{
+    transform: translateX(-50%) scaleX(1);
+    transition: all 0.3s;}
+    #header_inner ul li a:hover{
+        color: orangered;
+        transition: all 0.3s;
+    }
+
+/*header-회원가입,로그인*/
+#header_inner ol{
+    float: right;
+}
+#header_inner ol li{
+    float: left;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+/*main_banner*/
+#mb img{
+    width: 100%;
+    display: block;
+}
+
+/*brand*/
+#brand{
+    height: 550px;
+    margin-top: 150px;
+}
+#brand_inner{
+    width: 1320px;
+    margin: 0 auto;
+    height: 550px;
+}
+#brand_inner #img{
+    float: left;
+    width: 498px;
+    height: 445px;
+    background: url(images/brand_img.jpg) no-repeat center center;
+}
+#brand_inner #img.on1{
+    /*변화할 사진 배경*/
+    width: 498px;
+    height: 445px;
+    background: url(images/brand_img2.jpg) no-repeat center center;
+}
+#brand_inner #text{
+    float: right;
+    width: 822px;
+    height: 445px;
+    padding: 50px 0 50px 150px;
+    box-sizing: border-box;
+}
+#brand_inner #text h1{
+    line-height: 45px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+#brand_inner #text p{
+    padding: 10px 0;
+}
+.orange{
+    color: #ff6600;
+}
+
+/*promise*/
+#promised{
+    height: 550px;
+    margin-top: 150px;
+}
+#promise_inner{
+    width: 1320px;
+    margin: 0 auto;
+    height: 550px;
+}
+#promise_inner #img{
+    float: right;
+    width: 498px;
+    height: 445px;
+    background: url(images/promise_img.jpg) no-repeat center center;
+}
+#promise_inner #img.on2{
+    /*변화할 사진 배경*/
+    width: 498px;
+    height: 445px;
+    background: url(images/promise_img2.jpg) no-repeat center center;
+}
+#promise_inner #text{
+    float: left;
+    width: 822px;
+    height: 445px;
+    padding: 50px 0 50px 80px;
+    box-sizing: border-box;
+}
+#promise_inner #text h1{
+    line-height: 45px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+#promise_inner #text p{
+    padding: 10px 0;
+}
+.pink{
+    color: #d22c46;
+}
+
+/*same*/
+#same{
+    background: url(images/brandsame_bg.jpg) no-repeat center center;
+    width: 100%;
+    height: 988px;
+    margin-top: 30px;
+    background-size: cover;
+}
+#same_inner{
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+#same_inner #text{
+    padding: 120px 0 0 550px;
+}
+.lunchbox{
+    position: absolute;
+    top: 40%;
+    left: 78%;
+    
+}
+.fruit{
+    position: absolute;
+    top: 750px;
+    left: 400px;
+}
+#same_inner #text h1{
+    font-size: 50px;
+    padding-bottom: 90px;
+    color: #c03a17;
+    font-family: 'Cafe24Ssurround';
+}
+#same_inner #text p{
+    font-size: 22px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+/*rice 쌀소개*/
+#rice{
+    height: 528px;
+    margin: 180px 0 120px 0;
+}
+#rice_inner{
+    margin: 0 auto;
+    width: 1320px;
+    background: url(images/rice_bg.jpg) no-repeat center center;
+    height: 528px;
+    position: relative;
+}
+.rice{
+    position: absolute;
+    top: 200px;
+    left: -70px;
+}
+
+/*kimchi 김치소개*/
+#kimchi{
+    height: 648px;
+}
+#kimchi_inner{
+    width: 1320px;
+    margin: 0 auto;
+}
+#kimchi_inner>img{
+    float: left;
+    width: 995px;
+    height: 528px;
+}
+#kimchi_inner #text{
+    float: right;
+    height: 528px;
+    width: 325px;
+    text-align: center;
+    background: #2f2b1f;
+}
+#kimchi_inner #text>img{
+    width: 243px;
+    height: 258px;
+    display: inline-block;
+    padding-left: 60px;
+    padding-top: 50px;
+}
+#kimchi_inner #text p{
+    color: white;
+    font-size: 18px;
+    line-height: 27px;
+    padding-top: 50px;
+}
+
+/*beef 고기소개*/
+#beef{
+    height: 505px;
+}
+#beef_inner{
+    width: 1320px;
+    margin: 0 auto;
+    height: 385px;
+}
+#beef_inner #text{
+    float: left;
+    width: 627px;
+    height: 385px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+#beef_inner #img{
+    float: right;
+    width: 693px;
+    height: 385px;
+}
+#beef_inner #img .beef{
+    float: left;
+}
+#beef_inner #img .chicken{
+    float: right;
+}
+#beef_inner #text h1{
+    line-height: 45px;
+    color: #a61818;
+}
+#beef_inner #text span{
+    display: inline-block;
+    height: 3px;
+    width: 70px;
+    background: black;
+    margin: 12px 0;
+}
+#beef_inner #text h3{
+    padding: 15px 0;
+    color: #ac5050;
+    font-size: 19px;
+}
+#beef_inner #text p{
+    padding-left: 20px;
+}
+
+/*swear 해뭄선서약속*/
+#swear_inner{
+    width: 1320px;
+    margin: 0 auto;
+}
+#swear_inner h2{
+    text-align: center;
+}
+#swear_in{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+}
+#swear_in .box{
+    border-radius: 30px;
+    border: 3px solid #ff7e00;
+    padding: 50px 40px;
+    text-align: center;
+    width: 260px;
+    height: 375px;
+}
+#swear_in .box p{
+    padding: 50px 15px;
+    border-top: 3px solid #ff7e00;
+    line-height: 35px;
+    color: #552f2f;
+    font-weight: bold;
+    font-size: 17px;
+}
+#swear_in .box img{
+    display: inline-block;
+    padding-bottom: 40px;
+}
+/*map 지도*/
+#map{
+    height: 960px;
+}
+#map_inner{
+    width: 1320px;
+    margin: 0 auto;
+}
+#map_inner h2{
+    text-align: center;
+    padding: 50px 0;
+}
+#map_inner #text{
+    width: 1320px;
+    height: 130px;
+    margin-top: 70px;
+}
+#map_inner h1{
+    padding-bottom: 12px;
+    border-bottom: 3px solid #552f2f;
+    width: 120px;
+    margin-bottom: 20px;
+}
+#map_inner p{
+    font-weight: bold;
+    line-height: 30px;
+}
+#map_inner #text1{
+    height: 130px;
+    float: left;
+    padding-left: 100px;
+}
+#map_inner #text2{
+    height: 130px;
+    float: right;
+    padding-right: 400px;
+}
+#map_inner #text2 span{
+    font-size: 32px;
+    color: #ff7e00;
+}
+#map_inner #text2 p{
+    color: #777;
+}
+
+/*footer*/
+#footer{
+    height: 250px;
+    background: #585858;
+    width: 100%;
+}
+#footer_inner{
+    width: 1320px;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 14px;
+}
+#footer_inner>img{
+    float: left;
+}
+#footer_inner #company{
+    float: left;
+    text-align: center;
+    padding-left: 206px;
+    color: white;
+}
+#footer_inner #company ul li{
+    float: left;
+    padding:0 5px;
+}
+#footer_inner #company ul li a:hover{
+    border-bottom: 1px solid white;
+}
+#footer_inner #company ol li{
+    float: left;
+    padding:0 5px;
+}
+#footer_inner #company p{
+    clear: both;
+    padding: 10px 0 30px 0;
+}
+#footer_inner #company ul li a{
+    color: white;
+}
+#footer_inner #company ul, #footer_inner #company ol{
+    display: inline-block;
+}
+#footer_inner #company ol li img{
+    opacity: 0.5;
+}
+#footer_inner #company ol li img:hover{
+    opacity: 1;
+}
+.fix{
+    position: fixed;
+    z-index: 10;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    background: #fba653;
+}
+.fix a{
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px 18px;
+    text-align: center;
+}
